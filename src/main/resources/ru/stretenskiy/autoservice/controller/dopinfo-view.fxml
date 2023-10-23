@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/19.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.stretenskiy.autoservice.controller.DopInfoController">
+    <children>
+        <Pane layoutX="-3.0" prefHeight="114.0" prefWidth="736.0" style="-fx-background-color: #2E3348;">
+            <cursor>
+                <Cursor fx:constant="DEFAULT" />
+            </cursor>
+            <children>
+                <Text fill="WHITE" layoutX="288.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Доп. инфо" wrappingWidth="160.13671875">
+                    <font>
+                        <Font name="Arial" size="31.0" />
+                    </font>
+                </Text>
+                <Button fx:id="goMainButton" layoutX="607.0" layoutY="75.0" mnemonicParsing="false" onAction="#goMain" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: #2E3348;" text="На главную" textFill="WHITE">
+                    <font>
+                        <Font name="Arial" size="15.0" />
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+        <TableView fx:id="tableCost" editable="true" layoutX="-3.0" layoutY="114.0" prefHeight="65.0" prefWidth="278.0">
+            <columns>
+                <TableColumn fx:id="costOurColumn" prefWidth="142.0" text="Цена (отеч)" />
+                <TableColumn fx:id="costForeignColumn" prefWidth="135.0" text="Цена (инос)" />
+            </columns>
+        </TableView>
+        <Button fx:id="accButton" layoutX="90.0" layoutY="194.0" mnemonicParsing="false" onAction="#AccCost" prefHeight="25.0" prefWidth="115.0" text="Рассчитать" />
+      <DatePicker fx:id="withData" layoutX="399.0" layoutY="194.0" prefHeight="36.0" prefWidth="191.0" />
+      <DatePicker fx:id="beforeData" layoutX="399.0" layoutY="273.0" prefHeight="36.0" prefWidth="191.0" />
+      <Text layoutX="407.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C" />
+      <Text layoutX="403.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="До" />
+      <TableView fx:id="tableName" editable="true" layoutY="244.0" prefHeight="169.0" prefWidth="278.0">
+         <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="148.0" text="Имя" />
+            <TableColumn fx:id="countCarsColumn" prefWidth="129.0" text="Количество машин" />
+         </columns>
+      </TableView>
+      <Button fx:id="findButton" layoutX="90.0" layoutY="420.0" mnemonicParsing="false" onAction="#FindMasters" prefHeight="25.0" prefWidth="115.0" text="Найти" />
+    </children>
+</Pane>

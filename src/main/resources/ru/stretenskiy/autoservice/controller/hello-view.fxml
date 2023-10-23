@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.stretenskiy.autoservice.controller.HelloController">
+   <children>
+      <Pane layoutX="-3.0" prefHeight="114.0" prefWidth="736.0" style="-fx-background-color: #2E3348;">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <children>
+            <Text fill="WHITE" layoutX="283.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Автосервис" wrappingWidth="170.13671875">
+               <font>
+                  <Font name="Arial" size="31.0" />
+               </font>
+            </Text>
+            <Button fx:id="buttonClients" layoutX="38.0" layoutY="75.0" mnemonicParsing="false" onAction="#GoClients" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #2E3348;" text="Клиенты" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonMasters" layoutX="199.0" layoutY="75.0" mnemonicParsing="false" onAction="#GoMasters" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #2E3348;" text="Мастера" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonServices" layoutX="422.0" layoutY="75.0" mnemonicParsing="false" onAction="#GoServices" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #2E3348;" text="Услуги" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonDopInf" layoutX="583.0" layoutY="75.0" mnemonicParsing="false" onAction="#GoDopInf" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #2E3348;" text="Доп" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonNewAcc" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#GoNewAcc" prefHeight="25.0" prefWidth="124.0" style="-fx-background-color: #2E3348;" text="Войти в другой акк" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <ComboBox fx:id="listClients" layoutX="58.0" layoutY="196.0" prefHeight="25.0" prefWidth="174.0" />
+      <ComboBox fx:id="listMasters" layoutX="271.0" layoutY="196.0" prefHeight="25.0" prefWidth="174.0" />
+      <DatePicker fx:id="dateWork" layoutX="271.0" layoutY="295.0" />
+      <ComboBox fx:id="listServices" layoutX="58.0" layoutY="295.0" prefHeight="25.0" prefWidth="174.0" />
+      <Button fx:id="addWorks" layoutX="533.0" layoutY="196.0" mnemonicParsing="false" onAction="#AddWork" prefHeight="25.0" prefWidth="174.0" text="Добавить">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Button>
+      <Text fx:id="masters1" accessibleRole="BUTTON" layoutX="58.0" layoutY="191.0" stroke="#2c2121" strokeType="OUTSIDE" strokeWidth="0.0" text="Клиент" wrappingWidth="76.13671875">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="masters11" accessibleRole="BUTTON" layoutX="271.0" layoutY="191.0" stroke="#2c2121" strokeType="OUTSIDE" strokeWidth="0.0" text="Мастер" wrappingWidth="76.13671875">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="masters12" accessibleRole="BUTTON" layoutX="58.0" layoutY="292.0" stroke="#2c2121" strokeType="OUTSIDE" strokeWidth="0.0" text="Услуга" wrappingWidth="76.13671875">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="masters13" accessibleRole="BUTTON" layoutX="271.0" layoutY="292.0" stroke="#2c2121" strokeType="OUTSIDE" strokeWidth="0.0" text="Дата работы" wrappingWidth="98.13671875">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="buttonReport" layoutX="591.0" layoutY="422.0" mnemonicParsing="false" onAction="#CreateReportOnWorks" prefHeight="16.0" prefWidth="116.0" text="Отчет">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Button>
+      <Text fx:id="errorAddWork" fill="RED" layoutX="552.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="У этого мастера в эту дату уже была работа" visible="false" wrappingWidth="137.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
